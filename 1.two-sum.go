@@ -5,8 +5,10 @@
  */
 
 // @lc code=start
+package main
+
 func twoSum(nums []int, target int) []int {
-	sumMap := make(map[int]int) 
+	sumMap := make(map[int]int)
 	for i, x := range nums {
 		y := target - x
 		if _, ok := sumMap[y]; !ok {
@@ -17,5 +19,5 @@ func twoSum(nums []int, target int) []int {
 	}
 	return []int{}
 }
-// @lc code=end
 
+// @lc code=end
