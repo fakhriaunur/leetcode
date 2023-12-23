@@ -27,7 +27,7 @@ class MyQueue:
     def empty(self) -> bool:
         return not self.stk1 and not self.stk2
     
-    def move(self):
+    def move(self) -> None:
         if not self.stk2:
             while self.stk1:
                 self.stk2.append(self.stk1.pop())
