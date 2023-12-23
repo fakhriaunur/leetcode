@@ -18,5 +18,6 @@ class Solution:
             else:
                 sum_dict[x] = i
         
+        return []
 # @lc code=end
 
