@@ -10,13 +10,10 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         ans = 0
         min_price = float("inf")
-        for i, price in enumerate(prices):
-            if price < min_price:
-                min_price = price
+        for price in prices:
+            min_price = min(min_price, price)
             profit = price - min_price
             ans = max(ans, profit)
-            if profit > ans:
-                ans = profit
         return int(ans)
         
 # @lc code=end
