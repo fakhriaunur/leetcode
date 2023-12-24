@@ -19,8 +19,10 @@ class Solution:
         
         while curr:
             next = curr.next
+            
             curr.next = dummy.next
             dummy.next = curr
+            
             curr = next
         
         return dummy.next
