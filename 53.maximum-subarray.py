@@ -12,7 +12,7 @@ class Solution:
         max_sum = current_sum
         
         for num in nums[1:]:
-            current_sum = max(current_sum, 0) + num
+            current_sum = max(current_sum + num, num)
             max_sum = max(max_sum, current_sum)
         
         return max_sum
