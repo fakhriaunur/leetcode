@@ -8,14 +8,14 @@
 from typing import List
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        local_max = nums[0]
-        global_max = local_max
+        current_sum = nums[0]
+        max_sum = current_sum
         
         for num in nums[1:]:
-            local_max = max(local_max, 0) + num
-            global_max = max(global_max, local_max)
+            current_sum = max(current_sum, 0) + num
+            max_sum = max(max_sum, current_sum)
         
-        return global_max
+        return max_sum
         
 # @lc code=end
 
