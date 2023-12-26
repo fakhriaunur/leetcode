@@ -8,7 +8,7 @@
 from collections import Counter
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        mag_counter = Counter(magazine) 
+        mag_counter = Counter(magazine)
         
         for c in ransomNote:
             mag_counter[c] -= 1
