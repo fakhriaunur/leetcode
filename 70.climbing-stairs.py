@@ -7,12 +7,12 @@
 # @lc code=start
 class Solution:
     def climbStairs(self, n: int) -> int:
-        a = 0
-        b = 1
+        prev_step = 0
+        curr_step = 1
         
         for _ in range(n):
-            a, b = b, a + b
+            prev_step, curr_step = curr_step, prev_step + curr_step
         
-        return b
+        return curr_step
 # @lc code=end
 
