@@ -15,7 +15,7 @@ class Solution:
             while char in unique_chars:
                 unique_chars.remove(s[left_ptr])
                 left_ptr += 1
-
+            
             unique_chars.add(char)
             max_length = max(max_length, right_ptr - left_ptr + 1)
         
