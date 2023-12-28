@@ -13,6 +13,7 @@ class TreeNode:
         self.left = left
         self.right = right
 # @lc code=start
+from collections import deque
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         ans = []
@@ -20,13 +21,13 @@ class Solution:
         if not root:
             return []
         
-        queue = [root]
+        queue = deque([root])
         
         while queue:
             t = []
             
             for _ in range(len(queue)):
-                curr = queue.pop(0)
+                curr = queue.popleft()
                 t.append(curr.val)
                 
                 if curr.left:
