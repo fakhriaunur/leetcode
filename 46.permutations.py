@@ -11,6 +11,7 @@ class Solution:
         def dfs(i: int, path: List[int], used: List[bool], res: List[List[int]]) -> None:
             if i == len(nums):
                 res.append(path.copy())
+                return
             
             for j, num in enumerate(nums):
                 if used[j]:
