@@ -6,12 +6,13 @@
 
 # @lc code=start
 from typing import List
+from collections import deque
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
         rows = len(mat)
         cols = len(mat[0])
         dist_mat = [[-1] * cols for _ in range(rows)]
-        queue = []
+        queue = deque()
         
         for row in range(rows):
             for col in range(cols):
@@ -22,7 +23,7 @@ class Solution:
         directions = ((-1, 0), (0, -1), (1, 0), (0, 1))
         
         while queue:
-            row, col = queue.pop(0)
+            row, col = queue.popleft()
             for delta_row, delta_col in directions:
                 neighbor_row = row + delta_row
                 neighbor_col = col + delta_col
