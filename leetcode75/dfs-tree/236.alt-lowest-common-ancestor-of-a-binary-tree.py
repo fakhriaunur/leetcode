@@ -8,12 +8,12 @@
 class TreeNode:
     def __init__(self, x):
         self.val = x
-        self.left = None
-        self.right = None
+        self.left: None|TreeNode = None
+        self.right: None|TreeNode = None
 
 # @lc code=start
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(self, root: None|TreeNode, p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root:
             return None
             
